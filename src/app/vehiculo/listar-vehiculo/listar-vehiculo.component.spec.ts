@@ -17,16 +17,16 @@ describe('ListarVehiculoComponent', () => {
     component = fixture.componentInstance;
 
     component.vehiculos = [
-      new Vehiculo(1, 'Mazda', '3', 2019, 60000, ''),
-      new Vehiculo(2, 'Chevrolet', 'Sail', 2020, 50000, ''),
-      new Vehiculo(3, 'Renault', 'Logan', 2021, 55000, '')
+      new Vehiculo(1, 'Renault', 'Kangoo', 2017, 12000, 'Rojo', '', ''),
+      new Vehiculo(2, 'Chevrolet', 'Spark', 2018, 9000, 'Azul', '', ''),
+      new Vehiculo(3, 'Mazda', 'CX5', 2020, 15000, 'Negro', '', '')
     ];
 
     fixture.detectChanges();
   });
 
-  it('should create 3 rows in the table', () => {
-    const compiled = fixture.nativeElement;
+  it('should create a table with 3 rows + header', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
     const rows = compiled.querySelectorAll('tbody tr');
     expect(rows.length).toBe(3);
   });

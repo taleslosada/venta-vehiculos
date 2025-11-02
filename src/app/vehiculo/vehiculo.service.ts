@@ -7,7 +7,7 @@ import { Vehiculo } from './vehiculo.model';
   providedIn: 'root'
 })
 export class VehiculoService {
-  private apiUrl = 'https://tu-url.com/vehiculos.json'; // cambia por la URL que te den
+  private apiUrl = 'https://gist.githubusercontent.com/josejbocanegra/17bb8c76405e43655d551a90800c8a81/raw/d41b4acc3457e51e7533fad6d5e9925ee9676457/202212_MISW4104_Grupo1.json';
 
   constructor(private http: HttpClient) {}
 

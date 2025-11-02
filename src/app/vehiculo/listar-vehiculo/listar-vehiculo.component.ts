@@ -9,21 +9,20 @@ import { Vehiculo } from '../vehiculo.model';
 })
 export class ListarVehiculoComponent implements OnInit {
   vehiculos: Vehiculo[] = [];
-  totalPorMarca: { [marca: string]: number } = {};
+  conteoPorMarca: { [key: string]: number } = {};
 
   constructor(private vehiculoService: VehiculoService) {}
 
   ngOnInit(): void {
-    this.vehiculoService.getVehiculos().subscribe(data => {
+    this.vehiculoService.getVehiculos().subscribe((data) => {
       this.vehiculos = data;
-      this.calcularTotales();
+      this.calcularConteoPorMarca();
     });
   }
 
-  calcularTotales() {
-    this.totalPorMarca = {};
-    this.vehiculos.forEach(v => {
-      this.totalPorMarca[v.marca] = (this.totalPorMarca[v.marca] || 0) + 1;
+  calcularConteoPorMarca(): void {
+    this.vehiculos.forEach((v) => {
+      this.conteoPorMarca[v.marca] = (this.conteoPorMarca[v.marca] || 0) + 1;
     });
   }
 }

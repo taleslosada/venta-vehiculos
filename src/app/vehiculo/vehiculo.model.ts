@@ -3,22 +3,28 @@ export class Vehiculo {
   marca: string;
   linea: string;
   modelo: number;
-  precio: number;
+  kilometraje: number;
+  color: string;
   imagen: string;
+  referencia: string;
 
   constructor(
     id: number,
     marca: string,
     linea: string,
     modelo: number,
-    precio: number,
-    imagen: string
+    kilometraje: number,
+    color: string,
+    imagen: string,
+    referencia: string
   ) {
     this.id = id;
     this.marca = marca;
     this.linea = linea;
     this.modelo = modelo;
-    this.precio = precio;
+    this.kilometraje = kilometraje;
+    this.color = color;
     this.imagen = imagen;
+    this.referencia = referencia;
   }
 }
