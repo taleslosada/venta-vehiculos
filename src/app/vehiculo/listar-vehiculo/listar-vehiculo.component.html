@@ -1,8 +1,13 @@
-<div class="container mt-4">
-  <h3>TuSegundazo.com</h3>
-  <p><strong>Comercialización de automotores nuevos y usados</strong></p>
+<div class="container text-center mt-4">
+  <h2 class="text-start mb-3">TuSegundazo.com</h2>
 
-  <table class="table table-striped mt-3">
+  <!-- Encabezado con banner -->
+  <div class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-3">
+    <img src="assets/parcialweb.png" alt="Auto" class="banner-img" />
+  </div>
+
+  <!-- Tabla de vehículos -->
+  <table class="table table-striped align-middle text-start">
     <thead class="table-dark">
       <tr>
         <th>#</th>
@@ -21,12 +26,15 @@
     </tbody>
   </table>
 
-  <div class="mt-4">
-    <h5>Conteo por marca:</h5>
-    <ul>
-      <li *ngFor="let item of conteoPorMarca | keyvalue">
-        {{ item.key }}: {{ item.value }} vehículos
-      </li>
-    </ul>
+  <!-- Totales -->
+  <div class="text-start mt-4" *ngFor="let marca of nMarcas | keyvalue: compareByKey">
+    <p class="fw-semibold">
+      Total {{ marca.key }}: {{ marca.value }}
+    </p>
   </div>
+
+  <!-- Footer -->
+  <footer class="text-muted mt-4">
+    Contact us: +57 3102105253 – info@tusegundazo.com – @tusegundazo
+  </footer>
 </div>
