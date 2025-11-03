@@ -28,3 +28,10 @@ footer {
 .text-primary {
   color: #004aad !important;
 }
+.img-header {
+  display: block;
+  margin: 0 auto 20px auto;
+  max-width: 100%;
+  height: auto;
+  width: 100%; 
+}
